@@ -1,9 +1,1 @@
-rabbitmq2disk
-=====
-
-An OTP application
-
-Build
------
-
-    $ rebar3 compile
+Under heavy development - don't use !!!

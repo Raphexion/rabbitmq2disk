@@ -5,7 +5,9 @@
   {mod, { rabbitmq2disk_app, []}},
   {applications,
    [kernel,
-    stdlib
+    stdlib,
+    kiks,
+    erlmemfs
    ]},
   {env,[]},
   {modules, []},

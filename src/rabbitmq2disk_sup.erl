@@ -28,7 +28,9 @@ start_link() ->
 
 %% Child :: {Id,StartFunc,Restart,Shutdown,Type,Modules}
 init([]) ->
-    {ok, { {one_for_all, 0, 1}, []} }.
+    Children = [#{id => rabbitmq2disk,
+		  start => {rabbitmq2disk, start_link, ["/tmp"]}}],
+    {ok, { {one_for_all, 1, 1}, Children} }.
 
 %%====================================================================
 %% Internal functions
